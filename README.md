@@ -1,5 +1,5 @@
 # Knockout.js textInputComplete custom binding
-The textInputComplete binding keeps tracks of changes in a text input (`<input>` and `<textarea>`) and update the viewmodel observable only when user stops typing. It is useful when the the changes of input will trigger a series of resource-consuming actions like Ajax request in a search bar. It is compatible with all modern browsers and Internet Explorer 8 or above. Take a look at the [Demo Page](https://yuhlau.github.io/textInputComplete) to better understand what it is.
+The textInputComplete binding keeps tracks of changes in a text input (`<input>` and `<textarea>`) and update the viewmodel observable only when user stops typing. It is useful when the the changes of input will trigger a series of resource-consuming actions like Ajax request in a search bar. It is compatible with all modern browsers and Internet Explorer 8 or above. Take a look at the [Demo Page](https://yuhlau.github.io/knockout-textInputComplete) to better understand what it is.
   
 ## Index
 * [The Problem](#the-problem)
@@ -29,7 +29,7 @@ The majore difference between `textInputComplete` and the build-in `textInput` b
 ```
 
 ## Examples
-There is no better way to explain how it works by giving examples, and [Demo Page](https://yuhlau.github.io/textInputComplete)
+There is no better way to explain how it works by giving examples, and [Demo Page](https://yuhlau.github.io/knockout-textInputComplete)
 ### 1. Bind `textInputComplete` to a text box `<input>`
 ``` html
 <input type="text" data-bind="textInputComplete: query" />
