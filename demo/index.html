@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Knockout.js textInputComplete binding Demo Page</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+    <script src="js/knockout.textInputComplete.js"></script>
+    <style>
+        body {
+            padding-right: 15px;
+            padding-left: 15px;
+            font-family: 'Open Sans', sans-serif;
+            background-color: #F3F5F6;
+        }
+        h3 {
+            margin: 0;
+            padding: 5px 0;
+        }
+        input[type=text] {
+            width: 200px;
+            font-size: 16px;
+            padding-right: 10px;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        .demo-case {
+            padding-bottom: 15px;
+            padding-top: 15px;
+            border-bottom: 1px solid #CCC;
+        }
+        .clear-btn {
+            margin-left: 10px;
+        }
+        .counter-result {
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: underline;
+            line-height: 40px;
+        }
+        .query-result {
+            font-size: 16px;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Knockout.js textInputComplete binding Demo Page</h1>
+    <h2>Try searching "Hello World" in different text boxes</h2>
+    <br />
+    <div id="textInput" class="demo-case">
+        <h3>1. Knockout.js <span class="">textInput</span> binding (immediate update)</h3>
+        Search: <input type="text" placeholder="Type Hello World here" data-bind="textInput: queryImmediate" /><a href="#" class="clear-btn">Clear</a><br />
+        <span class="query-result"></span><br />
+        Number of Ajax Request(s): <span class="counter-result"></span><br />
+    </div>
+    <div id="textInputComplete-300ms" class="demo-case">
+        <h3>2. textInputComplete with 300ms inactive delay</h3>
+        Search: <input type="text" placeholder="Type Hello World here" data-bind="textInputComplete: query300ms, textInputCompleteDelay: 300" /><a href="#" class="clear-btn">Clear</a><br />
+        <span class="query-result"></span><br />
+        Number of Ajax Request(s): <span class="counter-result"></span><br />
+    </div>
+    <div id="textInputComplete-1000ms" class="demo-case">
+        <h3>3. textInputComplete with 1000ms inactive delay (for illustration only)</h3>
+        Search: <input type="text" placeholder="Type Hello World here" data-bind="textInputComplete: query1000ms, textInputCompleteDelay: 1000" /><a href="#" class="clear-btn">Clear</a><br />
+        <span class="query-result"></span><br />
+        Number of Ajax Request(s): <span class="counter-result"></span>
+    </div>
+    <script src="js/demo.js"></script>
+</body>
+</html>
